@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  background-color: #192140;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 80px;
+  width: 100vw;
+  min-height: 70px;
+  margin-bottom: 40px;
+}
+header .logo {
+  color: #DCF10D;
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 60px;
+  Letter-spacing: 10%;
+}
+header .nav-bar {
+  display: flex;
+  gap: 60px;
+  margin-right: 60px;
+}
+header .nav-bar .nav-menu {
+  display: flex;
+  gap: 25px;
+}
+header .nav-bar .nav-menu li {
+  list-style: none;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+header .nav-bar .nav-menu li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+header .nav-bar .nav-menu li .active {
+  color: #DCF10D;
+  border-bottom: 1px solid #DCF10D;
+}
+header .nav-bar .nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .nav-bar .nav-btn button {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #192140;
+  border: 2px solid #9D9DB5;
+  color: #9D9DB5;
+  cursor: pointer;
+}
+header .nav-bar .nav-btn button:hover {
+  color: #0266FF;
+  border-color: #0266FF;
+  border-radius: 40px;
+  transition: 0.5s eas;
+  cursor: pointer;
+}
+header .hamburgers {
+  display: none;
+}
+header .hamburgers span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-right: 15px;
+  border: 2px solid #9D9DB5;
+  color: #9D9DB5;
+  cursor: pointer;
+}
+header .hamburgers span:hover {
+  color: #0266FF;
+  border-color: #0266FF;
+  border-radius: 40px;
+  transition: 0.5s eas;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #FFFFFF;
+  gap: 40px;
+  padding: 0 80px;
+}
+main .cardHover .card {
+  position: relative;
+  background-color: #F8F9FC;
+}
+main .cardHover .card img {
+  display: block;
+  background-size: cover;
+}
+main .cardHover .card .xmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #9D9DB5;
+  color: #9D9DB5;
+  cursor: pointer;
+  opacity: 0;
+}
+main .cardHover .card .xmark:hover {
+  color: #0266FF;
+  border-color: #0266FF;
+  border-radius: 40px;
+  transition: 0.5s eas;
+  cursor: pointer;
+}
+main .cardHover .card .card-title {
+  position: absolute;
+  bottom: 60px;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+}
+main .cardHover .card .card-title .check {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #9D9DB5;
+  color: #9D9DB5;
+  cursor: pointer;
+  margin: 10px;
+  display: none;
+}
+main .cardHover .card .card-title .check i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .cardHover .card .card-title .check:hover {
+  color: #0266FF;
+  border-color: #0266FF;
+  border-radius: 40px;
+  transition: 0.5s eas;
+  cursor: pointer;
+}
+main .cardHover .card .card-title .checkActive {
+  display: block !important;
+  background-color: #0266FF;
+}
+main .cardHover .card .card-title p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 30px;
+  color: #10131C;
+}
+main .cardHover .card .cardChange {
+  height: 120px !important;
+}
+main .cardHover .info {
+  margin: 0 35px;
+}
+main .cardHover .info .card-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F8F9FC;
+  border-top: 2px solid #9D9DB5;
+  color: #9D9DB5;
+  font-size: 15px;
+}
+main .cardHover .info .card-stats .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #9D9DB5;
+  padding: 5px;
+  width: 150px;
+  border-radius: 50px;
+}
+main .cardHover .info .card-stats .heart-counts {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .cardHover .info .card-stats .heart-counts .heartActive {
+  color: #0266FF;
+}
+main .cardHover .info .card-stats .heart-counts i:hover {
+  color: #0266FF;
+  border-color: #0266FF;
+  border-radius: 40px;
+  transition: 0.5s eas;
+  cursor: pointer;
+}
+main .cardHover:hover .xmark {
+  opacity: 1;
+  transition: 0.5s ease-in;
+}
+main .cardHover:hover .card-title {
+  height: 120px;
+}
+main .cardHover:hover .card-title .check {
+  display: block;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #10131C;
+  color: #FFFFFF;
+  margin-top: 10px;
+  padding: 40px;
+  gap: 60px;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .container .nav-footer {
+  padding-top: 20px;
+}
+footer .container .nav-footer p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #D7F8FF;
+}
+footer .container .nav-footer .nav .nav-menu {
+  display: flex;
+  padding-top: 10px;
+  gap: 10px;
+}
+footer .container .nav-footer .nav .nav-menu li {
+  list-style-type: none;
+  color: #D7F8FF;
+  padding-top: 20px;
+  font-size: 12px;
+}
+footer .container .nav-footer .nav .nav-menu li a {
+  color: #D7F8FF;
+  text-decoration: none;
+}
+footer .container .nav-footer .nav .nav-menu .terms {
+  font-size: 8px;
+  font-weight: 400;
+}
+footer .container .nav-footer .nav .nav-menu .social-icons {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #192140;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+footer .container .nav-footer .nav .nav-menu .social-icons a {
+  color: #FFFFFF;
+}
+footer .container .nav-footer .nav .nav-menu .social-icons a:hover {
+  color: #0266FF;
+  border-color: #0266FF;
+  border-radius: 40px;
+  transition: 0.5s eas;
+  cursor: pointer;
+}
+footer .container .nav-footer .nav .nav-menu .social-icons:hover {
+  color: #0266FF;
+  border-color: #0266FF;
+  border-radius: 40px;
+  transition: 0.5s eas;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 860px) {
+  header .logo {
+    margin-left: 35px;
+  }
+  header .nav-bar {
+    display: none;
+  }
+  header .hamburgers {
+    display: block;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 425px) {
+  header .logo {
+    margin-left: 25px;
+  }
+  header .nav-bar {
+    display: none;
+  }
+  header .hamburgers {
+    display: block;
+    cursor: pointer;
+  }
+  main {
+    padding: 30px;
+  }
+  main .card .card-title p {
+    font-size: 18px;
+  }
+  footer {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */
